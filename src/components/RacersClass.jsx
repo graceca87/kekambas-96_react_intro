@@ -21,7 +21,7 @@ export default class RacersClass extends Component {
     }
 
     componentDidUpdate(prevProps, prevState){
-        if (prevState.round != this.state.round || prevState.season != this.state.season){
+        if (prevState.round !== this.state.round || prevState.season !== this.state.season){
             fetch(`https://ergast.com/api/f1/${this.state.season}/${this.state.round}/driverStandings.json`)
                 .then(res => res.json())
                 .then(data => {
