@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Link } from 'react-router-dom';
 
@@ -13,8 +14,9 @@ export default function Navbar(props) {
                 <div className="navbar-nav">
                     <Link className="nav-link" to="/">Home</Link>
                     <Link className="nav-link" to="/standings">Standings</Link>
-                    <a className="nav-link" href="/">Pricing</a>
-                    <a className="nav-link" href="/">Enabled</a>
+                    <Link className="nav-link" to="/register">Register</Link>
+                    <Link className="nav-link" to="/login">Login</Link>
+                    <Link className="nav-link" to="/" onClick={props.logout}>Logout</Link>
                 </div>
                 </div>
             </div>
